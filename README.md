@@ -24,3 +24,7 @@ Use separately labeled, representative evaluation data before drawing conclusion
 Run `python training_eval.py --input examples.json --min-accuracy 0.9`. Exit codes are 0 when the threshold is met, 1 when accuracy is below the threshold, and 2 for invalid input. Punctuation-only answers are rejected. Install with `python -m pip install .` and use `training-eval`.
 
 The deployment workflow verifies the installed command outside the checkout, scans application code with Bandit, and runs the tests and fixture in a network-isolated container. Build locally with `docker build -t training-eval .`. See SECURITY.md for reporting and data-handling scope.
+
+## License
+
+Licensed under the MIT License. See LICENSE for the full terms.
