@@ -1,0 +1,10 @@
+[
+  {"id":"greeting","expected":"hello","actual":"Hello!"},
+  {"id":"abstention","expected":"I do not know","actual":"I do not know."},
+  {"id":"numeric-error","expected":"30 days","actual":"90 days"},
+  {"id":"paraphrase-limit","expected":"I do not know","actual":"I cannot answer that"},
+  {"id":"extra-claim","expected":"EU region","actual":"EU region with zero downtime"},
+  {"id":"negation","expected":"Access is allowed","actual":"Access is not allowed"},
+  {"id":"case","expected":"REVIEW REQUIRED","actual":"review required"},
+  {"id":"whitespace","expected":"approved","actual":"  approved  "}
+]
