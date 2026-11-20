@@ -1,8 +1,20 @@
 import unittest
+from unittest.mock import patch
+from training_eval import main, normalize
 from training_eval import score, EXAMPLES
 
 
 class EvaluationTests(unittest.TestCase):
+    def test_punctuation_only(self):
+        with self.assertRaises(ValueError):
+            normalize("!!!")
+
+    def test_invalid_threshold(self):
+        with patch("sys.argv", ["training-eval", "--min-accuracy", "nan"]):
+            with self.assertRaises(SystemExit) as error:
+                main()
+        self.assertEqual(error.exception.code, 2)
+
     def test_fixture(self):
         self.assertEqual(score(EXAMPLES)["accuracy"], 1.0)
 
